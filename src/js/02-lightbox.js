@@ -1,7 +1,8 @@
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
 
 const galleryContainer = document.querySelector('.gallery');
+
+galleryContainer.addEventListener("click", onClickImage);
 
 function createGallary(items) {
     return items.map((item) =>     
@@ -16,21 +17,12 @@ function createGallary(items) {
 const addGallaryMarkup = createGallary(galleryItems);
 galleryContainer.innerHTML = addGallaryMarkup;
 
-galleryContainer.addEventListener("click", onClickImage);
-
 function onClickImage(event){
     blockActive(event);
 
     if(event.target.nodeName !== "IMG"){
         return;
     }
-
-   galleryContainer.addEventListener("keydown", (event) => {
-    if(event.code === "Escape"){
-        instance.close();
-    }
-   })
-
 }
 
 function blockActive(event){
