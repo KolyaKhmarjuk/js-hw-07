@@ -39,6 +39,5 @@ function blockActive(event){
 
 new SimpleLightbox('.gallery a', { 
     'captionsData': 'alt',
-    'showCounter': false,
     'fadeSpeed': 250,
 });
