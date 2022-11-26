@@ -20,7 +20,7 @@ galleryContainer.innerHTML = addGallaryMarkup;
 
 
 function onClickImage(event){
-    blockActive(event);
+    event.preventDefault();
 
     if(event.target.nodeName !== "IMG"){
         return;
@@ -36,10 +36,6 @@ function onClickImage(event){
     }
    })
 
-}
-
-function blockActive(event){
-    event.preventDefault();
 }
 
 

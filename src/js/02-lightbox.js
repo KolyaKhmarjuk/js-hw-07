@@ -18,18 +18,14 @@ const addGallaryMarkup = createGallary(galleryItems);
 galleryContainer.innerHTML = addGallaryMarkup;
 
 function onClickImage(event){
-    blockActive(event);
+    event.preventDefault();
 
     if(event.target.nodeName !== "IMG"){
         return;
     }
 }
 
-function blockActive(event){
-    event.preventDefault();
-}
-
 new SimpleLightbox('.gallery a', { 
     'captionsData': 'alt',
-    'fadeSpeed': 250,
+    'fadeSpeed': 250, 
 });
